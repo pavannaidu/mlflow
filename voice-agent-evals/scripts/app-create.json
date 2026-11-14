@@ -1,0 +1,9 @@
+{
+  "name": "voice-eval-inspector",
+  "description": "Voice Agent Evals: play the audio next to the MLflow trace text and collect human listening ratings. Illustrative data.",
+  "resources": [
+    {"name": "sql-warehouse", "sql_warehouse": {"id": "fb3b5c1dee0b9d55", "permission": "CAN_USE"}},
+    {"name": "experiment", "experiment": {"experiment_id": "3499395456346371", "permission": "CAN_EDIT"}},
+    {"name": "volume", "uc_securable": {"securable_full_name": "pavan_naidu_catalog.mlflow.voice_audio", "securable_type": "VOLUME", "permission": "READ_VOLUME"}}
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "_note": "Illustrative data. Meridian Ortho is a fictional supplier; every product, SKU, price and order is made up.",
+  "products": {
+    "TLF-2210": {
+      "name": "TriLock Femoral Stem",
+      "summary": "Titanium femoral stem for total hip replacement, sizes 9 to 18.",
+      "material": "titanium",
+      "sizes": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+      "sizes_in_stock": [9, 10, 11, 12, 13, 14, 15, 16],
+      "sizes_back_ordered": [17, 18],
+      "list_price_usd": 1840
+    },
+    "ARC-3305": {
+      "name": "Arcus Knee Tray",
+      "summary": "Tibial knee tray, available in cemented and cementless versions.",
+      "versions": ["cemented", "cementless"],
+      "stock_status": "in stock",
+      "list_price_usd": 2150
+    },
+    "VCS-0450": {
+      "name": "Veltra Cortical Screw 4.5 mm",
+      "summary": "4.5 millimeter cortical bone screw, lengths 20 to 60 millimeters.",
+      "screws_per_box": 12,
+      "lengths_mm": [20, 30, 40, 50, 60],
+      "stock_status": "in stock",
+      "list_price_usd_per_box": 310
+    },
+    "KBC-0040": {
+      "name": "Kestrel Bone Cement 40 g",
+      "summary": "Bone cement, 40 gram pack.",
+      "stock_status": "back-ordered",
+      "back_in_stock_date": "2026-12-02",
+      "list_price_usd": 95
+    },
+    "ORB-5212": {
+      "name": "Orbis Acetabular Cup",
+      "summary": "Acetabular cup for total hip replacement, diameters 46 to 64 millimeters in 2 millimeter steps.",
+      "diameters_mm": [46, 48, 50, 52, 54, 56, 58, 60, 62, 64],
+      "stock_status": "in stock",
+      "list_price_usd": 1420
+    }
+  },
+  "orders": {
+    "ORD-58213": {
+      "status": "shipped",
+      "shipped_on": "2026-11-03",
+      "expected_delivery": "2026-11-06",
+      "items": [{"sku": "TLF-2210", "quantity": 2}, {"sku": "VCS-0450", "quantity": 3}]
+    },
+    "ORD-60744": {
+      "status": "on hold",
+      "hold_reason": "waiting on a back-ordered item: KBC-0040",
+      "items": [{"sku": "ARC-3305", "quantity": 1}, {"sku": "KBC-0040", "quantity": 4}]
+    }
+  }
+}

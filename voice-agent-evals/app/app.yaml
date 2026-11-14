@@ -1,0 +1,18 @@
+# Databricks Apps runs `npm install` and `npm run build` on deploy (package.json is at the root),
+# then this command. The command is explicit because with a package.json present the default
+# would be `npm run start`.
+command: ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+
+env:
+  - name: DATABRICKS_WAREHOUSE_ID
+    valueFrom: sql-warehouse
+  - name: MLFLOW_EXPERIMENT_ID
+    valueFrom: experiment
+  - name: VOICE_CATALOG
+    value: "pavan_naidu_catalog"
+  - name: VOICE_SCHEMA
+    value: "mlflow"
+  - name: VOICE_VOLUME
+    value: "voice_audio"
+  - name: MLFLOW_TRACKING_URI
+    value: "databricks"

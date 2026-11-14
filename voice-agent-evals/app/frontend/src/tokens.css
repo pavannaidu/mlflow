@@ -1,0 +1,90 @@
+/* Databricks brand tokens (from databricks-impeccable brand-tokens.css), with DM Sans and DM Mono
+   self-hosted from /fonts so the app renders the same without Google Fonts. */
+
+@font-face { font-family: "DM Sans"; src: url("/fonts/dm-sans-regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("/fonts/dm-sans-medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "DM Sans"; src: url("/fonts/dm-sans-bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "DM Mono"; src: url("/fonts/dm-mono-regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "DM Mono"; src: url("/fonts/dm-mono-medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
+
+:root {
+  --db-lava-600: #FF3621;
+  --db-navy-900: #0B2026;
+  --db-oat-medium: #EEEDE9;
+  --db-oat-light: #F9F7F4;
+  --db-white: #FFFFFF;
+
+  --db-accent: var(--db-lava-600);
+  --db-success: #00A972;
+  --db-warning: #FBB300;
+  --db-info: #4462C9;
+  --db-orange-sec: #FF7033;
+
+  --db-neutral-700: #4A5568;
+  --db-neutral-500: #A0AEC0;
+  --db-neutral-300: #CBD5E0;
+  --db-border: #C4CCD6;
+
+  --db-bg: var(--db-oat-light);
+  --db-bg-subtle: var(--db-oat-medium);
+  --db-surface: var(--db-white);
+  --db-text-primary: var(--db-navy-900);
+  --db-text-secondary: #4A5568;
+
+  --db-font-primary: "DM Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --db-font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+
+  --db-text-h3: 1.5rem;
+  --db-text-h4: 1.125rem;
+  --db-text-body: 1rem;
+  --db-text-small: 0.875rem;
+  --text-xs: 0.8125rem; /* eyebrows, tags and legends only */
+
+  --db-space-xs: 4px;
+  --db-space-sm: 8px;
+  --db-space-md: 16px;
+  --db-space-lg: 24px;
+  --db-space-xl: 32px;
+  --db-space-2xl: 48px;
+
+  --db-radius-sm: 4px;
+  --db-radius-md: 8px;
+  --db-radius-card: 12px;
+  --db-radius-full: 9999px;
+
+  --db-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --db-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  --db-duration-fast: 150ms;
+  --db-duration-state: 250ms;
+  --db-ease-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Semantic tints for highlights (text on them stays Navy 900). */
+  --tint-bad: rgba(255, 54, 33, 0.1);
+  --tint-good: rgba(0, 169, 114, 0.12);
+  --tint-warn: rgba(251, 179, 0, 0.2);
+
+  /* Failure attribution: hues validated with the dataviz palette checker on white. Pass is a
+     soft tint of Success so the failure segments carry the visual weight. */
+  --attr-pass: rgba(0, 169, 114, 0.3);
+  --attr-asr: var(--db-info);
+  --attr-reasoning: var(--db-orange-sec);
+  --attr-flaky: var(--db-neutral-300);
+}
+
+html, body {
+  margin: 0;
+  background: var(--db-bg);
+  color: var(--db-text-primary);
+  font-family: var(--db-font-primary);
+  font-size: var(--db-text-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
